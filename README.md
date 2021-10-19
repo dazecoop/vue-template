@@ -1,5 +1,5 @@
 # vue-template
-## Tech included
+## 🛠 Tech included
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [Moment](https://momentjs.com/)
