@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <div class="container px-4 pt-20 text-center">
+      <h1 class="text-7xl md:text-9xl font-bold text-gray-200">
+        404
+      </h1>
+      <h2 class="text-xl">
+        Sorry, page not found!
+      </h2>
+      <p>
+        The page you are looking for might have been
+        removed, had its name changed, or is temporarily unavailable.
+      </p>
+      <a
+        href="/"
+        class="underline hover:text-blue-500"
+      >Back to homepage</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: '404',
+  components: {
+  },
+  metaInfo() {
+    return {
+      title: this.$siteName,
+    };
+  },
+}
+</script>
