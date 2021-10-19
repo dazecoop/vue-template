@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "csstools.postcss",
+    "streetsidesoftware.code-spell-checker",
+    "dbaeumer.vscode-eslint",
+    "macieklad.tailwind-sass-syntax"
+  ]
+}

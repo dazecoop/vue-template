@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "{siteName}",
+    "description": "Meta description example"
+  },
+  "pages": {
+    "index": {
+      "intro": {
+        "title": "Welcome to {siteName}",
+        "p-1": "This is just a dummy Vue template to build future projects on."
+      }
+    }
+  }
+}
