@@ -7,7 +7,7 @@
       <h2 class="text-xl">
         Sorry, page not found!
       </h2>
-      <p>
+      <p class="max-w-lg mx-auto">
         The page you are looking for might have been
         removed, had its name changed, or is temporarily unavailable.
       </p>

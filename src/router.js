@@ -9,7 +9,7 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/:locale?',
+      path: '/',
       name: 'index',
       component: Index
     },

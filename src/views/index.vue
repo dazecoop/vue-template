@@ -11,6 +11,10 @@
         :href="$siteDomain"
         class="hover:text-blue-500"
       >
+        <font-awesome-icon
+          :icon="['fab', 'github']"
+          class="mr-1"
+        />
         {{ $siteDomain }}
       </a>
     </p>

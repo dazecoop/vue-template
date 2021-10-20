@@ -39,6 +39,7 @@ import './assets/main.scss'
  */
 import './modules/filters'
 import './modules/tailwind'
+import './modules/fontawesome'
 
 /**
  * Global variables
