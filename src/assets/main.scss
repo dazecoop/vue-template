@@ -2,53 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
-label {
-  @apply text-gray-800 block pb-1;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  @apply pb-3;
+@mixin text {
+  @apply text-gray-600
 }
 
 p {
-  @apply text-gray-600 pb-4;
+  @include text;
+  @apply pb-4;
 }
-
 .container {
   @apply mx-auto px-6;
 }
 
-input {
+
+/**
+ * Headers
+ */
+h1,h2,h3,h4,h5,h6 {
+  @apply pb-3;
+}
+h1 {
+  @apply text-3xl pb-5;
+}
+h2 {
+  @include text;
+  @apply text-lg font-medium;
+}
+
+/**
+ * Alerts
+ */
+.alert {
+  @apply text-sm;
   &.error {
-    @apply border-red-500;
+    @apply text-red-600;
   }
 }
 
 /**
- * Button's
+ * Forms
  */
-.btn {
+form {
+  fieldset {
+    @apply pb-6;
+  }
+  label {
+    @include text;
+    @apply block font-medium text-gray-700 pb-2;
+  }
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  // [multiple],
+  textarea,
+  select {
+    @apply flex-1 block w-full rounded-md shadow-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500;
+    &.error {
+      @apply border-red-500;
+    }
+  }
+
+  .prepend {
+    @apply flex rounded-md shadow-sm;
+    span {
+      @apply inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500;
+    }
+    input {
+      @apply rounded-l-none;
+    }
+  }
+}
+
+/**
+ * Buttons
+ */
+button {
   &.loading {
-    @apply relative;
-    color: transparent;
+    @apply relative text-transparent cursor-wait;
     &:after {
       content: '';
       left: calc(50% - 0.75rem);
-      @apply absolute w-6 h-6 border-b-2 border-white rounded-full animate-spin;
+      @apply absolute w-5 h-5 border-b-2 border-white rounded-full animate-spin;
     }
   }
   &.btn-lg {
     @apply py-6 px-8 text-2xl;
   }
+  &:disabled {
+    @apply bg-gray-300;
+    &:hover {
+      @apply bg-gray-300;
+    }
+  }
 }
 
 /**
- * Table's
+ * Tables
  */
 table {
   &.table {
+    @apply w-full;
     td, th {
-      @apply px-6 py-4 border-b;
+      @include text;
+      @apply px-4 py-2 border-b text-left;
+    }
+    &.stripe {
+      tbody {
+        tr {
+          &:nth-child(even) {
+            @apply bg-gray-100;
+          }
+        }
+      }
     }
   }
 }
