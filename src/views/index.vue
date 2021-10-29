@@ -26,47 +26,23 @@
 
     <form class="max-w-md mx-auto">
       <h2>Form example</h2>
-
-      <fieldset>
-        <label for="example-1">
-          Regular input
-        </label>
-        <t-input
-          id="example-1"
-          placeholder="Input placeholder"
-        />
-      </fieldset>
-
-      <fieldset>
-        <label for="example-2">
-          Has an error
-        </label>
-        <t-input
-          id="example-2"
-          class="error"
-          placeholder="Input placeholder"
-        />
-        <div class="alert error mt-1">
-          Please enter a value
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <label for="example-3">
-          Input with prepend
-        </label>
-        <div class="prepend">
-          <span>
-            http://
-          </span>
-          <t-input
-            id="example-3"
-            placeholder="Input placeholder"
-            class="rounded-l-none"
-          />
-        </div>
-      </fieldset>
-
+      <text-form-field
+        name="example-1"
+        label="Regular input"
+        placeholder="Input placeholder"
+      />
+      <text-form-field
+        name="example-2"
+        label="Has an error"
+        placeholder="Input with error"
+        errors="Please enter a value"
+      />
+      <text-form-field
+        name="example-3"
+        label="Input with prepend"
+        placeholder="Input with prepend"
+        prepend="icon-user-secret"
+      />
       <fieldset>
         <div class="grid sm:grid-cols-3 gap-4">
           <t-button>
@@ -109,10 +85,12 @@
 </template>
 
 <script>
+import TextFormField from '../components/Atoms/Form/TextFormField.vue';
 
 export default {
   name: 'Index',
   components: {
+    TextFormField,
   },
   data() {
     return {
