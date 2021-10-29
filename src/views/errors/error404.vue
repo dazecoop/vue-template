@@ -21,12 +21,15 @@
 
 <script>
 export default {
-  name: '404',
+  name: 'Error404',
   components: {
   },
   metaInfo() {
     return {
-      title: this.$siteName,
+      title: `404 Not Found - ${this.$siteName}`,
+      meta: [
+        { name: 'robots', content: 'noindex, nofollow' },
+      ],
     };
   },
 }
